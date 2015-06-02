@@ -19,11 +19,12 @@ var main = (function () {
         this.y = canvas.height / 2;
 
         this.draw = function () {
-
+            ctx.fillStyle = '#fafafa';
+            ctx.fillRect(this.x, this.y, 10, 2);
         };
 
         this.update = function () {
-            this.x += 2;
+            this.x += 15;
         };
     };
 
@@ -90,6 +91,7 @@ var main = (function () {
 
             // Add projectile
             // Start propellant gas animation
+            projectiles.push(new Projectile());
 
         }, false);
 
